@@ -18,7 +18,7 @@ public class Usuario {
 	private String nombre;
 	
 
-	@Column(name = "apellidos", length = 80, nullable = false)
+	@Column(name="apellidos", length = 80, nullable = false)
 	private String apellidos;
 	
 	@Column(name = "cedula", length = 100, nullable = false, unique = true)
