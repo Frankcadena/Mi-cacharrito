@@ -24,10 +24,10 @@ public class Usuario {
 	@Column(name = "cedula", length = 100, nullable = false, unique = true)
 	private Integer cedula;
 	
-	@Column(name = "telefono", length = 100, nullable = false, unique = true)
+	@Column(name = "telefono", length = 100, nullable = false)
 	private String telefono;
 	
-	@Column(name = "FechaNacimiento", length = 100, nullable = false, unique = true)
+	@Column(name = "FechaNacimiento", length = 100, nullable = false)
 	private String FechaNacimiento;
 
 	public Usuario() {
@@ -92,8 +92,6 @@ public class Usuario {
 	public void setFechaNacimiento(String fechaNacimiento) {
 		FechaNacimiento = fechaNacimiento;
 	}
-	
-	
 	
 	
 }
