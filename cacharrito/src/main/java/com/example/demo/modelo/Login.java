@@ -55,7 +55,7 @@ public class Login {
 
 
 		public void setContraseña(String contraseña) {
-			this.contraseña = contraseña;
+			this.contraseña =contraseña;
 		}
 		
 		

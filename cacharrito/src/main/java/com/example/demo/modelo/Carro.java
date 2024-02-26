@@ -53,7 +53,7 @@ public class Carro {
             }
 
             public void setDisponibilidad(String disponibilidad) {
-                this.disponibilidad=disponibilidad;
+                this.disponibilidad = disponibilidad;
             }
 
 
