@@ -17,8 +17,6 @@ public class Reserva {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long idReserva;
 		
-		@Column(name = "placa", length = 80, nullable = false, unique = true )
-		private String placa;
 		
 		@Column(name = "fecha", length = 100, nullable = false )
 		private String fecha;
@@ -30,13 +28,13 @@ public class Reserva {
 		private String salida;
 		
 		@Column(name = "totalpagar", length = 100, nullable = false )
-		private String pago;
+		private Integer pago;
 		
 		@Column(name = "pueestodisponibles", length = 100, nullable = false )
-		private String puestosdis;
+		private Integer puestosdis;
 		
 		@Column(name = "puestosreservados", length = 100, nullable = false )
-		private String puestosreser;
+		private Integer puestosreser;
 		
 		@ManyToOne()
 		@JoinColumn(name="id", referencedColumnName="id")
@@ -51,11 +49,10 @@ public class Reserva {
 			// TODO Auto-generated constructor stub
 		}
 
-		public Reserva(Long idReserva, String placa, String fecha, String destino, String salida, String pago,
-				String puestosdis, String puestosreser, Usuario usuario, Carro carro) {
+		public Reserva(Long idReserva, String fecha, String destino, String salida, Integer pago, Integer puestosdis,
+				Integer puestosreser, Usuario usuario, Carro carro) {
 			super();
 			this.idReserva = idReserva;
-			this.placa = placa;
 			this.fecha = fecha;
 			this.destino = destino;
 			this.salida = salida;
@@ -72,14 +69,6 @@ public class Reserva {
 
 		public void setIdReserva(Long idReserva) {
 			this.idReserva = idReserva;
-		}
-
-		public String getPlaca() {
-			return placa;
-		}
-
-		public void setPlaca(String placa) {
-			this.placa = placa;
 		}
 
 		public String getFecha() {
@@ -106,27 +95,27 @@ public class Reserva {
 			this.salida = salida;
 		}
 
-		public String getPago() {
+		public Integer getPago() {
 			return pago;
 		}
 
-		public void setPago(String pago) {
+		public void setPago(Integer pago) {
 			this.pago = pago;
 		}
 
-		public String getPuestosdis() {
+		public Integer getPuestosdis() {
 			return puestosdis;
 		}
 
-		public void setPuestosdis(String puestosdis) {
+		public void setPuestosdis(Integer puestosdis) {
 			this.puestosdis = puestosdis;
 		}
 
-		public String getPuestosreser() {
+		public Integer getPuestosreser() {
 			return puestosreser;
 		}
 
-		public void setPuestosreser(String puestosreser) {
+		public void setPuestosreser(Integer puestosreser) {
 			this.puestosreser = puestosreser;
 		}
 
@@ -143,7 +132,9 @@ public class Reserva {
 		}
 
 		public void setCarro(Carro carro) {
-			this.carro =carro;
-		}	
+			this.carro = carro;
+		}
 		
-}	
+		
+
+}
