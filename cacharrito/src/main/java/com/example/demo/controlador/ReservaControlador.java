@@ -24,17 +24,19 @@ public class ReservaControlador {
 	@Autowired
 	private RepositorioUsuario repositorioU;
 	@Autowired
-	private RepositorioUsuario repositorioC;
+	private RepositorioCarro repositorioC;
 	
 	
 	
 	@GetMapping("/guardar")
 	public List<Reserva> guardarReserva(){
 		
-		Optional<Usuario> u = this.repositorioU.findById(124L);
-		Optional<Carro> c = this.repositorioC.findById(123L);
+		Usuario u = this.repositorioU.findById(124L).get();
+		Carro c = this.repositorioC.findById(123L).get();
+		Integer r= c.getCantidadPuesto() - c.getDisponibilidad();
+		int d = c.getDisponibilidad();
 		
-		Reserva e = new Reserva("27/05/2023", "bogota" , "10:00 AM" , 300000. u, c);
+		Reserva e = new Reserva("27/05/2023","bogota","10:00 AM",300000,d,r,u,c);
 		this.repositorio.save(e);
 		
 		return this.repositorio.findAll();
