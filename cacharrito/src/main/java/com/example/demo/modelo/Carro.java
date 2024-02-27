@@ -12,50 +12,49 @@ public class Carro {
 
         @Id
         @Column(name="numero_placa")
-        private Long placa;
+        private Long Id;
 
-            @Column(name = "cantidad_puesto", length = 100, nullable = false )
-            private Integer cantidadPuesto;
+        @Column(name = "cantidad_puesto", length = 100, nullable = false )
+        private Integer cantidadPuesto;
 
-            @Column(name = "disponibilidad", length = 100, nullable = false )
-            private String disponibilidad;
+        @Column(name = "puesto_disponibles", length = 100, nullable = false )
+        private Integer disponibilidad;
 
-			public Carro() {
-				super();
-				// TODO Auto-generated constructor stub
-			}
+		public Carro() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
 
-			public Carro(Long placa, Integer cantidadPuesto, String disponibilidad) {
-				super();
-				this.placa = placa;
-				this.cantidadPuesto = cantidadPuesto;
-				this.disponibilidad = disponibilidad;
-			}
+		public Carro(Long id, Integer cantidadPuesto, Integer disponibilidad) {
+			super();
+			Id = id;
+			this.cantidadPuesto = cantidadPuesto;
+			this.disponibilidad = disponibilidad;
+		}
 
-			public Long getPlaca() {
-				return placa;
-			}
+		public Long getId() {
+			return Id;
+		}
 
-			public void setPlaca(Long placa) {
-				this.placa = placa;
-			}
+		public void setId(Long id) {
+			Id = id;
+		}
 
-			public Integer getCantidadPuesto() {
-				return cantidadPuesto;
-			}
+		public Integer getCantidadPuesto() {
+			return cantidadPuesto;
+		}
 
-			public void setCantidadPuesto(Integer cantidadPuesto) {
-				this.cantidadPuesto = cantidadPuesto;
-			}
+		public void setCantidadPuesto(Integer cantidadPuesto) {
+			this.cantidadPuesto = cantidadPuesto;
+		}
 
-			public String getDisponibilidad() {
-				return disponibilidad;
-			}
+		public Integer getDisponibilidad() {
+			return disponibilidad;
+		}
 
-			public void setDisponibilidad(String disponibilidad) {
-				this.disponibilidad = disponibilidad;
-			}
-            
-            
+		public void setDisponibilidad(Integer disponibilidad) {
+			this.disponibilidad = disponibilidad;
+		}
+
+		
 }
-

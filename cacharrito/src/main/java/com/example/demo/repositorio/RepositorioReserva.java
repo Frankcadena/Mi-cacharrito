@@ -9,5 +9,7 @@ import com.example.demo.modelo.Reserva;
 
 @Repository
 public interface RepositorioReserva extends JpaRepository<Reserva, Long>{
+	
+	
 
 }
