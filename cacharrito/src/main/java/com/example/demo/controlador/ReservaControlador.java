@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.modelo.Reserva;
 import com.example.demo.modelo.Usuario;
+import com.example.demo.modelo.Carro;
 import com.example.demo.repositorio.RepositorioReserva;
 import com.example.demo.repositorio.RepositorioUsuario;
+import com.example.demo.repositorio.RepositorioCarro;
 
 @RestController
 @RequestMapping("/ver/e2/")
@@ -21,14 +23,20 @@ public class ReservaControlador {
 	private RepositorioReserva repositorio;
 	@Autowired
 	private RepositorioUsuario repositorioU;
+	@Autowired
+	private RepositorioCarro repositorioC;
+	
 	
 	
 	@GetMapping("/guardar")
 	public List<Reserva> guardarReserva(){
 		
-		Optional<Usuario> u = this.repositorioU.findById(123L);
+		Usuario u = this.repositorioU.findById(124L).get();
+		Carro c = this.repositorioC.findById(123L).get();
+		Integer r= c.getCantidadPuesto() - c.getDisponibilidad();
+		int d = c.getDisponibilidad();
 		
-		Reserva e = new Reserva("27/05/2023", "bogota" , "10:00 AM" , 300000. 123L, 16);
+		Reserva e = new Reserva("27/05/2023","bogota","10:00 AM",300000,d,r,u,c);
 		this.repositorio.save(e);
 		
 		return this.repositorio.findAll();

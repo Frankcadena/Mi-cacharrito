@@ -1,4 +1,5 @@
 package com.example.demo.modelo;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,7 +17,6 @@ public class Reserva {
 		@Id	
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long idReserva;
-		
 		
 		@Column(name = "fecha", length = 100, nullable = false )
 		private String fecha;
@@ -44,23 +44,24 @@ public class Reserva {
 		@JoinColumn(name="numero_placa", referencedColumnName="numero_placa")
 		private Carro carro;
 
+		
+
 		public Reserva() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-		public Reserva(Long idReserva, String fecha, String destino, String salida, Integer pago, Integer puestosdis,
-				Integer puestosreser, Usuario usuario, Carro carro) {
-			super();
-			this.idReserva = idReserva;
+		public Reserva(String fecha, String destino, String salida, Integer pago, Integer puestosdis,
+				Integer puestosreser, Usuario u, Carro c) {
+		
 			this.fecha = fecha;
 			this.destino = destino;
 			this.salida = salida;
 			this.pago = pago;
 			this.puestosdis = puestosdis;
 			this.puestosreser = puestosreser;
-			this.usuario = usuario;
-			this.carro = carro;
+			this.usuario = u;
+			this.carro = c;
 		}
 
 		public Long getIdReserva() {
