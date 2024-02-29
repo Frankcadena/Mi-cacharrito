@@ -14,8 +14,6 @@ public class Login {
 		@Column(name="login")
 		private Long id;
 		
-		
-		
 		@Column(name = "contraseña", length = 50, nullable = false, unique = true )
 		private String contraseña;
 

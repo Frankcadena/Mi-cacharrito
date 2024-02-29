@@ -34,8 +34,6 @@ public class Administrador {
 			this.contraseña = contraseña;
 		}
 
-
-
 		public Long getId() {
 			return id;
 		}

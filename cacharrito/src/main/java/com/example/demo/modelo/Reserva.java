@@ -135,7 +135,6 @@ public class Reserva {
 		public void setCarro(Carro carro) {
 			this.carro = carro;
 		}
-		
-		
+			
 
 }
