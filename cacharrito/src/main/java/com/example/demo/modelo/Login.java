@@ -11,8 +11,8 @@ import jakarta.persistence.Table;
 public class Login {
 
         @Id
-        @Column(name="Login")
-        private Long id;
+        @Column(name="Usuario",length = 50, nullable = false, unique = true)
+        private String id;
 
         @Column(name = "contraseña", length = 50, nullable = false, unique = true )
         private String contraseña;
@@ -22,17 +22,17 @@ public class Login {
 			// TODO Auto-generated constructor stub
 		}
 
-		public Login(Long id, String contraseña) {
+		public Login(String id, String contraseña) {
 			super();
 			this.id = id;
 			this.contraseña = contraseña;
 		}
 
-		public Long getId() {
+		public String getId() {
 			return id;
 		}
 
-		public void setId(Long id) {
+		public void setId(String id) {
 			this.id = id;
 		}
 

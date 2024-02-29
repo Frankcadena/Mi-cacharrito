@@ -18,7 +18,6 @@ public class Reserva {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long idReserva;
 		
-		
 		@Column(name = "fecha", length = 100, nullable = false )
 		private String fecha;
 		
@@ -47,10 +46,14 @@ public class Reserva {
 
 		
 
-		public Reserva( String fecha, String destino, String salida, Integer pago, Integer puestosdis,
+		public Reserva() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+		public Reserva(String fecha, String destino, String salida, Integer pago, Integer puestosdis,
 				Integer puestosreser, Usuario u, Carro c) {
 		
-			
 			this.fecha = fecha;
 			this.destino = destino;
 			this.salida = salida;
