@@ -1,0 +1,46 @@
+<button class="btn btn-primary" (click)="abrirRegistro()">Registrar</button>
+<div class="modal" tabindex="-1" id="registro">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="cerrarRegistro()"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">ID</label>
+                        <input for="inputId" type="number" class="form-control" id="inputId" [(ngModel)]="usuario.id" name="id">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input for="inputNombre" type="text" class="form-control" id="inputNombre" [(ngModel)]="usuario.nombre" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellidos</label>
+                        <input for="inputApellidos" type="text" class="form-control" id="inputApellidos" [(ngModel)]="usuario.apellidos" name="apellidos">
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cedula</label>
+                        <input for="inputCedula" id="inputCedula" type="number" [(ngModel)]="usuario.cedula" name="cedula">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Telefono</label>
+                        <input for="inputTelefono" id="inputTelefono" type="number" [(ngModel)]="usuario.telefono" name="telefono">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Fecha de Nacimiento</label>
+                        <input class="inputFechaNacimiento" id="inputFechaNacimiento" type="text" [(ngModel)]="usuario.fechaNacimiento" name="fechaNacimiento">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cerrarRegistro()">Cerrar</button>
+                        <button type="button" class="btn btn-primary" (click)="guardarRegistro()">Guardar</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
