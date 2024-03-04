@@ -1,5 +1,8 @@
 package com.example.demo.modelo;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -46,91 +49,149 @@ public class Reserva {
 
 		
 
+
 		public Reserva() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
+
+
+
 		public Reserva(String fecha, String destino, String salida, Integer pago, Integer puestosdis,
-				Integer puestosreser, Usuario u, Carro c) {
-		
+				Integer puestosreser, Usuario usuario, Carro carro) {
+			super();
 			this.fecha = fecha;
 			this.destino = destino;
 			this.salida = salida;
 			this.pago = pago;
 			this.puestosdis = puestosdis;
 			this.puestosreser = puestosreser;
-			this.usuario = u;
-			this.carro = c;
+			this.usuario = usuario;
+			this.carro = carro;
 		}
+
+
+
 
 		public Long getIdReserva() {
 			return idReserva;
 		}
 
+
+
+
 		public void setIdReserva(Long idReserva) {
 			this.idReserva = idReserva;
 		}
+
+
+
 
 		public String getFecha() {
 			return fecha;
 		}
 
+
+
+
 		public void setFecha(String fecha) {
 			this.fecha = fecha;
 		}
+
+
+
 
 		public String getDestino() {
 			return destino;
 		}
 
+
+
+
 		public void setDestino(String destino) {
 			this.destino = destino;
 		}
+
+
+
 
 		public String getSalida() {
 			return salida;
 		}
 
+
+
+
 		public void setSalida(String salida) {
 			this.salida = salida;
 		}
+
+
+
 
 		public Integer getPago() {
 			return pago;
 		}
 
+
+
+
 		public void setPago(Integer pago) {
 			this.pago = pago;
 		}
+
+
+
 
 		public Integer getPuestosdis() {
 			return puestosdis;
 		}
 
+
+
+
 		public void setPuestosdis(Integer puestosdis) {
 			this.puestosdis = puestosdis;
 		}
+
+
+
 
 		public Integer getPuestosreser() {
 			return puestosreser;
 		}
 
+
+
+
 		public void setPuestosreser(Integer puestosreser) {
 			this.puestosreser = puestosreser;
 		}
+
+
+
 
 		public Usuario getUsuario() {
 			return usuario;
 		}
 
+
+
+
 		public void setUsuario(Usuario usuario) {
 			this.usuario = usuario;
 		}
 
+
+
+
 		public Carro getCarro() {
 			return carro;
 		}
+
+
+
 
 		public void setCarro(Carro carro) {
 			this.carro = carro;
@@ -139,3 +200,6 @@ public class Reserva {
 		
 
 }
+
+		
+

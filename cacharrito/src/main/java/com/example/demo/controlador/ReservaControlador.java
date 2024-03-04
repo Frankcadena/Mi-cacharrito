@@ -53,8 +53,4 @@ public class ReservaControlador {
 	public List<Reserva>verTodosReservas(){
 		return repositorio.findAll();
 	}
-	
-	
 	}
-	
-
