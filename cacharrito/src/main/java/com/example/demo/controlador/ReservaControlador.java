@@ -18,7 +18,6 @@ import com.example.demo.repositorio.RepositorioCarro;
 @RestController
 @RequestMapping("/ver/e2/")
 
-
 public class ReservaControlador {
 	@Autowired
 	private RepositorioReserva repositorio;
@@ -32,7 +31,7 @@ public class ReservaControlador {
 	@GetMapping("/guardar")
 	public List<Reserva> guardarReserva(){
 		
-		Usuario u = this.repositorioU.findById(124L).get();
+		Usuario u = this.repositorioU.findById(123L).get();
 		Carro c = this.repositorioC.findById(123L).get();
 		Integer r= c.getCantidadPuesto() - c.getDisponibilidad();
 		int d = c.getDisponibilidad();

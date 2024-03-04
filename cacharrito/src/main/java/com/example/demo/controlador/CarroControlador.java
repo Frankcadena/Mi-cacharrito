@@ -28,10 +28,10 @@ public class CarroControlador {
 	}
 	
 	@GetMapping("/borrar")
-	public String borrarcarro () {
+	public String borrarCarro() {
 		this.repositorio.deleteById(123L);
 		
-		return "Reserva Cancelada";
+		return "Carro Borrado";
 	}
 	
 	@GetMapping("/consultar")
@@ -39,13 +39,12 @@ public class CarroControlador {
 		return repositorio.findAll();
 	}
 		
-		
-		@GetMapping("/actualizar")
-	    public Carro actualizarCarro() {
-	    Carro e= this.repositorio.findById(123L).get();
-	    e.setDisponibilidad(5);
-	    this.repositorio.save(e);
-	    return this.repositorio.findById(123L).get();
-
+	@GetMapping("/actualizar")
+	public Carro actualizarCarro() {
+	Carro e= this.repositorio.findById(123L).get();
+	e.setDisponibilidad(5);
+	this.repositorio.save(e);
+	return this.repositorio.findById(123L).get();
 }
+
 }

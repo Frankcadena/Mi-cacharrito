@@ -9,53 +9,39 @@ import jakarta.persistence.Table;
 @Table(name="administrador")
 
 public class Administrador {
-	
-		@Id
-		@Column(name="admin")
-		private Long id;
-		
-		
-		
-		@Column(name = "contraseña", length = 50, nullable = false, unique = true )
-		private String contraseña;
 
+        @Id
+        @Column(name="admin", unique = true)
+        private String id;
 
+        @Column(name = "contraseña", length = 50, nullable = false, unique = true )
+        private String contraseña;
 
 		public Administrador() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
 
-
-
-		public Administrador(Long id, String contraseña) {
+		public Administrador(String id, String contraseña) {
 			super();
 			this.id = id;
 			this.contraseña = contraseña;
 		}
 
-		public Long getId() {
+		public String getId() {
 			return id;
 		}
 
-
-
-		public void setId(Long id) {
+		public void setId(String id) {
 			this.id = id;
 		}
-
-
 
 		public String getContraseña() {
 			return contraseña;
 		}
 
-
-
 		public void setContraseña(String contraseña) {
 			this.contraseña = contraseña;
 		}
-		
-		
-
-	}
+        
+    }
