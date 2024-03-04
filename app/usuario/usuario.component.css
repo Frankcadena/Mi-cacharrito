@@ -1,0 +1,14 @@
+table{
+width: 100%;
+border: 1px solid •#000;
+border-spacing: 0;}
+
+tr, th {
+width: 15%;
+border: 1px solid #000}
+
+p{ 
+    color: #000;
+    font-size: 25px;
+    font-style: italic;
+}
